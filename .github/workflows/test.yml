@@ -17,6 +17,13 @@ jobs:
 
       - name: Install Playwright
         run: npx playwright install
-
+ 
+      - name: Start backend
+        run: |
+        cd backend
+        npm install
+        node server.js &
+ 
       - name: Run tests
         run: npx playwright test
+        
